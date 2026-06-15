@@ -1,17 +1,30 @@
 #include <stdio.h>
 
-// prototype: says to the compiler that exist a function in some place bellow main
-void meow(int n);
+void meow(int times);
+int get_number(void);
 
 int main(void)
 {
-    meow(10);
+    int n = get_number();
+    meow(n);
 }
 
-void meow(int n)
+int get_number(void)
 {
-    for (int i = 0; i < n; i++)
+    int number;
+    do
     {
-        printf("%i - meow inside a prototyped function\n", i);
+        printf("Enter the number: ");
+        scanf("%d", &number);
+    }
+    while (number < 0);
+    return number;
+}
+
+void meow(int times)
+{
+    for (int i = 0; i < times; i++)
+    {
+        printf("%i - meow\n", i);
     }
 }
