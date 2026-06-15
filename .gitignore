@@ -1,0 +1,15 @@
+# Extensões comuns de compilação e artefatos
+*.out
+*.o
+*.a
+*.so
+
+# Ignorar binários compilados sem extensão na raiz e subpastas
+# (Bloqueia executáveis gerados na mesma pasta do código)
+*
+!*/
+!*.*
+*.o
+cat
+cat.exe
+week-1-c/cat
