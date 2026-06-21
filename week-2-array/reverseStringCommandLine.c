@@ -14,5 +14,5 @@ int main(int argc, string argv[])
     {
         printf("%c", argv[1][i]);
     }
-    printf("\n");
+    printf("/n");
 }
