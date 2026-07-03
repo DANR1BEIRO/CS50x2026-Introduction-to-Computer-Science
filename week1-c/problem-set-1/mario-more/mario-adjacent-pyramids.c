@@ -11,7 +11,7 @@ int main(void)
 
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < height - i - 1; j++)
+        for (int space = 0; space < height - i - 1; space++)
         {
             printf(" ");
         }
@@ -23,7 +23,7 @@ int main(void)
 
         printf("  ");
 
-        for (int x = 0; x < i + 1; x++)
+        for (int hash = 0; hash < i + 1; hash++)
         {
             printf("#");
         }
