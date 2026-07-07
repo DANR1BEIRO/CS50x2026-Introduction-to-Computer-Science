@@ -11,9 +11,19 @@ candidate get_candidate(void);
 
 int main(void)
 {
-    candidate president = get_candidate();
+    candidate candidates[3];
+    int length = sizeof(candidates) / sizeof(candidates[0]);
 
-    printf("%s has %i votes.\n", president.name, president.votes);
+    for (int i = 0; i < length; i++)
+    {
+        candidates[i] = get_candidate();
+    }
+    printf("\n");
+
+    for (int i = 0; i < length; i++)
+    {
+        printf("%s has %i votes.\n", candidates[i].name, candidates[i].votes);
+    }
 }
 
 candidate get_candidate(void)
