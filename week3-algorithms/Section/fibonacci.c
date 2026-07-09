@@ -4,9 +4,14 @@
 int fib(int term);
 int main(void)
 {
-    int term = get_int("Term: ");
-    int number_at_term = fib(term);
-    printf("%i\n", number_at_term);
+    int term = get_int("Print the sequence up to term: ");
+
+    for (int i = 0; i < term - 1; i++)
+    {
+        printf("%i, ", fib(i));
+    }
+    printf("%i.\n", fib(term - 1));
+    return 0;
 }
 
 int fib(int n)
@@ -16,13 +21,5 @@ int fib(int n)
     if (n == 1)
         return 1;
 
-    int sequence[n + 1];
-    sequence[0] = 0;
-    sequence[1] = 1;
-
-    for (int i = 2; i <= n; i++)
-    {
-        sequence[i] = sequence[i - 1] + sequence[i - 2];
-    }
-    return sequence[n];
+    return fib(n - 1) + fib(n - 2);
 }
