@@ -6,11 +6,11 @@ int main(void)
 {
     int term = get_int("Print the sequence up to term: ");
 
-    for (int i = 0; i < term - 1; i++)
+    for (int i = 0; i < term; i++)
     {
         printf("%i, ", fib(i));
     }
-    printf("%i.\n", fib(term - 1));
+    printf("%i.\n", fib(term));
     return 0;
 }
 
