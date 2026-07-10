@@ -2,23 +2,25 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++ Runner: Debug Session",
+      "name": "gcc - Debug Active File",
       "type": "cppdbg",
       "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
       "args": [],
       "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
       "externalConsole": false,
-      "cwd": "/home/danielribeiro/CS50/week-1-c/problem-set-1/mario-more",
-      "program": "/home/danielribeiro/CS50/week-1-c/problem-set-1/mario-more/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "preLaunchTask": "C/C++: gcc build active file",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ]
+      ],
+      "miDebuggerPath": "/usr/bin/gdb"
     }
   ]
 }
